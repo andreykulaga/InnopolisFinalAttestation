@@ -1,0 +1,26 @@
+public class Human {
+    private String name;
+    private int weight;
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public void setName(String name) {
+        if (String.length(name) == 0 || String.length(name) > 30) {
+            name = null;
+        }
+        this.name = name;
+    }
+
+    public void setWeight(int weight) {
+        if (weight <= 0 || weight > 150) {
+            weight = null;
+        }
+        this.weight = weight;
+    }
+}
