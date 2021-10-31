@@ -11,7 +11,7 @@ public class Human {
     }
 
     public void setName(String name) {
-        if (String.length(name) == 0 || String.length(name) > 30) {
+        if (name.length() == 0 || name.length() > 30) {
             name = null;
         }
         this.name = name;
@@ -19,7 +19,7 @@ public class Human {
 
     public void setWeight(int weight) {
         if (weight <= 0 || weight > 150) {
-            weight = null;
+            weight = 0;
         }
         this.weight = weight;
     }
