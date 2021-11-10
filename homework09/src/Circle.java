@@ -4,6 +4,6 @@ public class Circle extends Ellipse {
     }
 
     public double getPerimeter() {
-        return 2 * Math.PI * radius1;
+        return 2 * Math.PI * getRadius1();
     }
 }

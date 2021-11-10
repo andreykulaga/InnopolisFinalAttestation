@@ -1,8 +1,10 @@
 public class Ellipse extends Figure {
-    protected double radius1; //protected чтобы был доступ к переменной у метода Circle
+    private double radius1;
     private double radius2;
 
-
+    public double getRadius1() {
+        return radius1;
+    }
 
     public Ellipse(double x, double y, double radius1, double radius2) {
         super(x, y);
