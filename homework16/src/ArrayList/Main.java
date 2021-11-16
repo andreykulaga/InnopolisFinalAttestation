@@ -3,7 +3,7 @@ package ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
         numbers.add(33);
         numbers.add(15);
         numbers.add(11);
