@@ -1,17 +1,14 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.OptionalDouble;
 
 public class Main3 {
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/cars.txt"))) {
             String model = "Camry";
-            System.out.print("Средняя стоимость модели " + model + " - ");
 
-            //тоже не знаю как убрать "Optional" при выводе средней стоимости
-
-            System.out.println(
-                    reader.lines()
+            OptionalDouble averagePrice = reader.lines()
                     .filter(line -> {
                         if (!line.equals("")) {
                             String[] parts = line.split("\\|");
@@ -22,11 +19,13 @@ public class Main3 {
                     })
                     .map(line -> {
                         String[] parts = line.split("\\|");
-                        return parts[4];
+                        return Double.parseDouble(parts[4]);
                     })
-                    .reduce((line1, line2) -> String.valueOf((Double.parseDouble(line1) + Double.parseDouble(line2))/2))
-            );
+                    .mapToDouble(c -> c.doubleValue())
+                    .average();
 
+            System.out.print("Средняя стоимость модели " + model + " - ");
+            averagePrice.ifPresent(System.out::println);
         } catch (IOException e) {
             throw new IllegalArgumentException(e);
         }
