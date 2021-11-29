@@ -1,0 +1,10 @@
+o001aa178|Camry|Black|133|820000
+o002aa156|Ceed|Green|40|1100000
+o003aa111|Vesta|Black|78|600000
+o004aa156|Soul|Red|0|1100000
+o005aa148|Granta|Silver|78|710000
+o006aa148|Granta|Silver|99|790000
+o007aa148|Ceed|Red|50|799000
+o008aa178|Camry|Blue|84|1000000
+o009aa178|Camry|Green|36|1200000
+
