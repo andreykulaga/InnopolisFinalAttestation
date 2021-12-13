@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вход</title>
+</head>
+<body>
+<h1>
+    Введите свой логин и пароль для входа в кинотеатр
+</h1>
+<form method="post" action="/sign_in">
+    <label>
+        Имя пользователя <input type="email" name="email" placeholder="Укажите email">
+    </label>
+    <label>
+        Пароль <input type="password" name="password" placeholder="Введите пароль">
+    </label>
+    <input type="submit" value="Вход">
+</form>
+
+<a href="/sign_up">Зарегистрироваться</a>
+
+
+</body>
+</html>
